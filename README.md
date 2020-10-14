@@ -1,68 +1,90 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React-Node-Redux-Mongo Application
 
-## Available Scripts
+## Contact Keeper 
+This application is a simple contact keeper for saving your contacts.It has authentications using JWT and state management using redux.
 
-In the project directory, you can run:
+# Project
+This a simple contact - Keeper web application build with mern stack with context api for state management.
 
-### `npm start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Run Locally
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+To run the app locally, clone the repository then proceed to run add environment variables for your mongoDB setup. Then run the command :-
 
-### `npm test`
+```bash
+npm run project-local
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
 
-### `npm run build`
+This script will install all the dependencies and run your development server.You can the register then login  and start using the application.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Production Deployment
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+For deployment to heroku there is a heroku-postbuild script for that.
 
-### `npm run eject`
+Go to your terminal and run:-
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+heroku login -i
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+Then type in your credentials,if the login is successful the run commad 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+heroku create
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+The command will create an app with a random name, go to your browser and login to your heroku dashboard click on the app name of the app you created ,click on deploy tab ,scroll down ,under ``create a new git repository`` copy the command `heroku git: remote ....` and paste in your terminal to add the remote repository .
 
-## Learn More
+Next run 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+git push heroku master
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
 
-### Code Splitting
+This will deploy and give you a url at the end where you can view your deployed application
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-### Analyzing the Bundle Size
+## production deployment 2
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+This deployment will be done on a digital ocean server, a script has been added to the package.json file to make the deployment
+as easy as possible.
 
-### Making a Progressive Web App
+However to set up the server ,google ``server set-up for node application ubuntu server`` and pick the digital ocean documentation.
+The digital ocean documentation is clear and precise on the steps to take and commands to run to set up the server successfuly. 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+After which you can run 
 
-### Advanced Configuration
+```bash
+npm run prod 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+```
 
-### Deployment
+This will do all dependency install and start the application. You can check by typing your server ip with the port 8080 included  i.e ` 172:89:54:30:8081` this will take you to the login page. 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
 
-### `npm run build` fails to minify
+You will notice the app will be running on the foreground,and this is not adviced ,install pm2 with command 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+```bash
+npm i pm2 -g
+
+```
+
+If you run into a permission problem add sudo to the start of the command. Use pm2 to run your application.
+
+```bash
+npm run prod2
+
+```
+
+This script the same as the `npm run prod` script but now this will run your application in the background.
+
+
+## Author
+
+>EDWIN OMONDI
+
+
+
