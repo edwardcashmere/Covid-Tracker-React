@@ -56,6 +56,7 @@ npm run prod2
 
 This script the same as the `npm run prod` script but now this will run your application in the background.
 
+[Preview Project](https://edwardcashmere.github.io/Covid-Tracker-React/)
 
 ## Author
 
