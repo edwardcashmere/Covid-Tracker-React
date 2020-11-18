@@ -1,4 +1,4 @@
-# React-Node-Redux-Mongo Application
+# React-ContextAPI- Application
 
 ## Covid Tracker
 This is a covid Tracking App build with React with context api for state management,3rd party api's,Material UI,chart.js .
